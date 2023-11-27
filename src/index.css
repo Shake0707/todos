@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body.white {
+  --back-img: url('./assets/mainBackgroud.png');
+  --back-img-gradient: linear-gradient(225deg, #5596FF 0%, #AC2DEB 100%);
+  --themeToggle-img: url('./assets/moon.svg');
+  --back-color: #FAFAFA;
+  --todo-backColor: #FFF;
+  --todo-shadowColor: rgba(194, 195, 214, 0.50);
+  --create-inpColor: #9495A5;
+  --create-inp-textColor: #393A4B;
+  --todo-textColor: #494C6B;
+  --todo-complated-borderColor: #E3E4F1;
+  --todo-comlated-textColor: #D1D2DA;
+  --todo-line-color: #E3E4F1;
+  --filter-textColor: #9495A5;
+  --filter-hover: #494C6B;
+}
+
+body.dark {
+  --back-img: url('./assets/mainBackgroudDark.png');
+  --back-img-gradient: linear-gradient(135deg, #3710BD 0%, #A42395 100%);
+  --themeToggle-img: url('./assets/soon.svg');
+  --back-color: #171823;
+  --todo-backColor: #25273D;
+  --todo-shadowColor: rgba(0, 0, 0, 0.50);
+  --create-inpColor: #767992;
+  --create-inp-textColor: #C8CBE7;
+  --todo-textColor: #C8CBE7;
+  --todo-complated-borderColor: #393A4B;
+  --todo-comlated-textColor: #4D5067;
+  --todo-line-color: #393A4B;
+  --filter-textColor: #5B5E7E;
+  --filter-hover: #E3E4F1;
+}
+
+body {
+  font-family: "Josefin Sans";
+  background-color: var(--back-color);
+}
+
+input {
+  font-family: 'Josefin Sans';
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
