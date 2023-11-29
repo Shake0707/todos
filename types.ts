@@ -6,7 +6,7 @@ export interface IThemeContext {
 }
 
 export enum EApi {
-    gloabal = 'https://todos-api-x88y.onrender.com'
+    gloabal = 'https://todos-api-x88y.onrender.com/api/todos'
 }
 
 export enum ETheme {
