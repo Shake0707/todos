@@ -3,9 +3,12 @@ import { Frame } from './style'
 import ListItem from './Item/ListItem'
 import Filters from './Filters/Filters'
 import { DataContext } from '../../contexts/DataContext'
+import { log } from 'console'
 
 const List: FC = () => {
     const data = useContext(DataContext);
+    console.log(data);
+    
     return (
         <Frame>
             {data?.isLoading ? (<h1>
