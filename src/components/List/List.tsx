@@ -6,7 +6,6 @@ import { DataContext } from '../../contexts/DataContext'
 
 const List: FC = () => {
     const data = useContext(DataContext);
-    console.log(data);
     
     return (
         <Frame>
