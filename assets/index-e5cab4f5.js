@@ -75,7 +75,7 @@ Error generating stack: `+o.message+`
     &>input {
         display: none;
     }
-`,im=M.createContext(void 0);var om=(e=>(e.gloabal="https://todos-api-x88y.onrender.com",e))(om||{}),It=(e=>(e.dark="dark",e.ligth="white",e))(It||{}),yc=(e=>(e.theme="theme",e))(yc||{});const Ov=()=>{const e=M.useContext(im),t=()=>{e==null||e.setTheme(n=>{const r=n===It.dark?It.ligth:It.dark;return localStorage.setItem(yc.theme,r),r})};return F.jsx(Pv,{children:F.jsx("input",{onChange:t,type:"checkbox",checked:(e==null?void 0:e.theme)===It.dark})})},Rv=ne.form`
+`,im=M.createContext(void 0);var om=(e=>(e.gloabal="https://todos-api-x88y.onrender.com/api/todos",e))(om||{}),It=(e=>(e.dark="dark",e.ligth="white",e))(It||{}),yc=(e=>(e.theme="theme",e))(yc||{});const Ov=()=>{const e=M.useContext(im),t=()=>{e==null||e.setTheme(n=>{const r=n===It.dark?It.ligth:It.dark;return localStorage.setItem(yc.theme,r),r})};return F.jsx(Pv,{children:F.jsx("input",{onChange:t,type:"checkbox",checked:(e==null?void 0:e.theme)===It.dark})})},Rv=ne.form`
     margin-top: 40px;
     padding: 20px 0 20px 24px;
     background-color: var(--todo-backColor);
