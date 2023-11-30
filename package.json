@@ -2,7 +2,7 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
-  "proxy": "https://todos-api-x88y.onrender.com/",
+  "proxy": "https://todos-api-x88y.onrender.com/api/todos",
   "type": "module",
   "scripts": {
     "dev": "vite",
