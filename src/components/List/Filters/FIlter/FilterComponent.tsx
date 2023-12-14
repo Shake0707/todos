@@ -7,7 +7,7 @@ interface IProps {
     id: string;
 }
 
-const Filter: FC<IProps> = ({ id }) => {
+const FilterComponent: FC<IProps> = ({ id }) => {
     const setFilter = useContext(FilterContext) as Dispatch<SetStateAction<string | undefined>>;
     let filter: string = '';
     const data = useContext(DataContext);
@@ -36,4 +36,4 @@ const Filter: FC<IProps> = ({ id }) => {
     )
 }
 
-export default Filter;
+export default FilterComponent;
