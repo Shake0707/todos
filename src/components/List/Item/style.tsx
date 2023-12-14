@@ -12,6 +12,12 @@ export const Frame = styled.label`
     &:hover #del {
         display: block;
     }
+
+    @media screen and (max-width: 768px) {
+        & #del {
+           display: block;
+        }
+    }
 `
 
 export const InFrame = styled.div`
@@ -27,7 +33,7 @@ export const Text = styled.p`
     letter-spacing: -0.25px;
     position: relative;
 
-    &>div {
+    &>span {
         display: none;
         width: 100%;
         height: 1.5px;
@@ -41,7 +47,7 @@ export const Text = styled.p`
     &.active {
         color: var(--todo-comlated-textColor);
 
-        &>div {
+        &>span {
             display: block;
         }
     }

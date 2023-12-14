@@ -4,7 +4,7 @@ export const Frame = styled.form`
     width: 166px;
     display: flex;
     justify-content: space-between;
-    margin-left: 96px;
+    margin: 0 auto;
 `
 
 export const Item = styled.label`

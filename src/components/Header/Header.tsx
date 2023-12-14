@@ -1,11 +1,12 @@
-import { FC } from 'react'
-import { Frame, ImgFrame } from './style'
+import { FC } from 'react';
+import { Frame } from './style';
+import LazyBackgroundImg from './LazyBackgroundImg/LazyBackgroundImg';
 
 const Header: FC = () => {
     return (
         <>
             <Frame>
-                <ImgFrame />
+                <LazyBackgroundImg />
             </Frame>
         </>
     )

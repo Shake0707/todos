@@ -10,6 +10,12 @@ export const Frame = styled.div`
             color: var(--filter-hover);
         }
     }
+
+    @media screen and (max-width: 550px){
+        & {
+            justify-content: space-between;
+        }
+    }
 `
 
 export const ItemsCount = styled.p`

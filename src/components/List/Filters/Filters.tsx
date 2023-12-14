@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Frame, ItemsCount } from './style';
-import FIlter from './FIlter/FIlter';
+import Filter from './Filter/Filter';
 import Clear from './Clear/Clear';
 
 interface IProps {
@@ -11,7 +11,7 @@ const Filters: FC<IProps> = ({ items }) => {
     return (
         <Frame>
             <ItemsCount>{items} items left</ItemsCount>
-            <FIlter />
+            <Filter id='desktop-filter'/>
             <Clear />
         </Frame>
     )

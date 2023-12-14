@@ -3,7 +3,11 @@ import { Frame, Item } from './style';
 import { DataContext } from '../../../../contexts/DataContext';
 import { FilterContext } from '../../../../contexts/FilterContext';
 
-const FIlter: FC = () => {
+interface IProps {
+    id: string;
+}
+
+const Filter: FC<IProps> = ({ id }) => {
     const setFilter = useContext(FilterContext) as Dispatch<SetStateAction<string | undefined>>;
     let filter: string = '';
     const data = useContext(DataContext);
@@ -15,7 +19,7 @@ const FIlter: FC = () => {
     }
 
     return (
-        <Frame onChange={changeHandler}>
+        <Frame onChange={changeHandler} id={id}>
             <Item>
                 <input type="radio" id='' name='filter' defaultChecked />
                 <span>All</span>
@@ -32,4 +36,4 @@ const FIlter: FC = () => {
     )
 }
 
-export default FIlter
+export default Filter;

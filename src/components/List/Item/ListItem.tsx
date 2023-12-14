@@ -1,11 +1,11 @@
-import { ChangeEventHandler, FC, MouseEventHandler, useState } from 'react';
+import { FC } from 'react';
 import { Btn_del, Frame, InFrame, Text } from './style';
 import Complate from '../../Complate/Complate';
 import Line from '../Line/Line';
-import { QueryObserverResult, RefetchOptions, useMutation } from '@tanstack/react-query';
-import TodoService from '../../../services/Todo.service';
+import { QueryObserverResult, RefetchOptions } from '@tanstack/react-query';
 import { ITodo } from '../../../../types';
 import { AxiosResponse } from 'axios';
+import useLogickItem from '../../../hooks/useLocgikItem';
 
 interface IProps {
     todo: ITodo;
@@ -13,34 +13,7 @@ interface IProps {
 }
 
 const ListItem: FC<IProps> = ({ todo, refetch }) => {
-    const [isComlated, setIsComplated] = useState<boolean>(todo.complated);
-    const { mutate: deleteItem } = useMutation({
-        mutationKey: ['delete todo'],
-        mutationFn: (id: number) => TodoService.delete(id),
-        onSuccess: () => {
-            refetch();
-        }
-    });
-
-    const { mutate: toggle } = useMutation({
-        mutationKey: ['toggle todo'],
-        mutationFn: (todo: ITodo) => TodoService.toggleIsComlate(todo),
-        onSuccess: () => {
-            refetch();
-        }
-    });
-
-    const handleChange: ChangeEventHandler<HTMLInputElement> = () => {
-        setIsComplated(prev => !prev);
-    toggle({
-            ...todo,
-            complated: !todo.complated
-        });
-    }
-
-    const handleClick: MouseEventHandler<HTMLDivElement> = () => {
-        deleteItem(todo._id as number);
-    }
+    const { isComlated, handleClick, handleChange } = useLogickItem({ todo, refetch });
 
     return (
         <>
@@ -48,7 +21,7 @@ const ListItem: FC<IProps> = ({ todo, refetch }) => {
                 <InFrame>
                     <Complate complated={isComlated} />
                     <Text className={isComlated ? 'active' : ''}>
-                        <div></div>
+                        <span></span>
                         {todo.text}
                     </Text>
                     <Btn_del id='del' onClick={handleClick} />
@@ -57,8 +30,7 @@ const ListItem: FC<IProps> = ({ todo, refetch }) => {
             </Frame>
             <Line />
         </>
-
-    )
+    );
 }
 
 export default ListItem
